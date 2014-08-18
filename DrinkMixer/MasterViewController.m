@@ -10,12 +10,16 @@
 
 #import "DetailViewController.h"
 
+
+
 @interface MasterViewController () {
     NSMutableArray *_objects;
 }
 @end
 
 @implementation MasterViewController
+
+@synthesize drinks = drinks_;
 
 - (void)awakeFromNib
 {
@@ -26,6 +30,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"DrinkDirections" ofType:@"plist"];
+    
+    drinks_ = [[NSMutableArray alloc]initWithContentsOfFile:path];
+    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
@@ -57,15 +67,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return [self.drinks count];
+//    return _objects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+//    NSDate *object = _objects[indexPath.row];
+    cell.textLabel.text = [[self.drinks objectAtIndex:indexPath.row]objectForKey:@"name"];
+//    cell.textLabel.text = [object description];
     return cell;
 }
 
@@ -105,9 +117,12 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        DetailViewController *detailview = [segue destinationViewController];
+        [detailview setDrink:[self.drinks objectAtIndex:indexPath.row]];
+        NSLog(@"%@", [self.drinks objectAtIndex:indexPath.row]);
+        
     }
+    
 }
 
 @end

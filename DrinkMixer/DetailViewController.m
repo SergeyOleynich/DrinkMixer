@@ -14,16 +14,26 @@
 
 @implementation DetailViewController
 
+@synthesize nameTextField = nameTextField_ , ingredientsTextView = ingredientsTextView_ , directionsTextView = directionsTextView_ , drink = drink_;
+
 #pragma mark - Managing the detail item
 
 - (void)setDetailItem:(id)newDetailItem
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
-        
+
         // Update the view.
         [self configureView];
     }
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"%@", drink_);
+    self.nameTextField.text = [drink_ objectForKey:@"name"];
+    self.ingredientsTextView.text = [drink_ objectForKey:@"ingredients"];
+    self.directionsTextView.text = [drink_ objectForKey:@"directions"];
 }
 
 - (void)configureView
@@ -38,6 +48,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
 }

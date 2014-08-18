@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3E4249F199E415E00F1F0D4 /* DrinkDirections.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3E4249E199E415E00F1F0D4 /* DrinkDirections.plist */; };
 		C3F46E65199DFB9000F1CCCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F46E64199DFB9000F1CCCB /* Foundation.framework */; };
 		C3F46E67199DFB9000F1CCCB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F46E66199DFB9000F1CCCB /* CoreGraphics.framework */; };
 		C3F46E69199DFB9000F1CCCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F46E68199DFB9000F1CCCB /* UIKit.framework */; };
@@ -22,6 +23,7 @@
 		C3F46E89199DFB9000F1CCCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F46E68199DFB9000F1CCCB /* UIKit.framework */; };
 		C3F46E91199DFB9000F1CCCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3F46E8F199DFB9000F1CCCB /* InfoPlist.strings */; };
 		C3F46E93199DFB9000F1CCCB /* DrinkMixerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F46E92199DFB9000F1CCCB /* DrinkMixerTests.m */; };
+		C3F46E9D199E2BDD00F1CCCB /* DrinkArray.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3F46E9C199E2BDD00F1CCCB /* DrinkArray.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3E4249E199E415E00F1F0D4 /* DrinkDirections.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DrinkDirections.plist; sourceTree = "<group>"; };
 		C3F46E61199DFB8F00F1CCCB /* DrinkMixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkMixer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F46E64199DFB9000F1CCCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3F46E66199DFB9000F1CCCB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,6 +59,7 @@
 		C3F46E8E199DFB9000F1CCCB /* DrinkMixerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrinkMixerTests-Info.plist"; sourceTree = "<group>"; };
 		C3F46E90199DFB9000F1CCCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C3F46E92199DFB9000F1CCCB /* DrinkMixerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrinkMixerTests.m; sourceTree = "<group>"; };
+		C3F46E9C199E2BDD00F1CCCB /* DrinkArray.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DrinkArray.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 				C3F46E6D199DFB9000F1CCCB /* InfoPlist.strings */,
 				C3F46E70199DFB9000F1CCCB /* main.m */,
 				C3F46E72199DFB9000F1CCCB /* DrinkMixer-Prefix.pch */,
+				C3E4249E199E415E00F1F0D4 /* DrinkDirections.plist */,
+				C3F46E9C199E2BDD00F1CCCB /* DrinkArray.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,7 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3F46E80199DFB9000F1CCCB /* Images.xcassets in Resources */,
+				C3F46E9D199E2BDD00F1CCCB /* DrinkArray.plist in Resources */,
 				C3F46E6F199DFB9000F1CCCB /* InfoPlist.strings in Resources */,
+				C3E4249F199E415E00F1F0D4 /* DrinkDirections.plist in Resources */,
 				C3F46E78199DFB9000F1CCCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +474,7 @@
 				C3F46E98199DFB9000F1CCCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3F46E99199DFB9000F1CCCB /* Build configuration list for PBXNativeTarget "DrinkMixerTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +483,7 @@
 				C3F46E9B199DFB9000F1CCCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
